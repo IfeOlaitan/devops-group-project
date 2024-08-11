@@ -7,8 +7,7 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 RUN npm run build  
-# Debugging step
-RUN ls -alh /app
+
 
 # Stage 2: PRODUCTION STAGE
 FROM nginx:alpine
